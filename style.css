@@ -1,0 +1,65 @@
+#question-container {
+    position: fixed;
+    bottom: 100px;
+    width: 100%;
+}
+
+.answer {
+    width: 400px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+.answer span {
+    color: rgb(210, 127, 44);
+}
+
+.answer.active {
+    background-color: rgb(210, 127, 44);
+    color: black;
+}
+
+.answer.active span {
+    color: white;
+}
+
+.answer.correct {
+    background-color: green;
+    color: white;
+}
+
+.question-body {
+    background-color: black;
+    color: white;
+    width: 828px;
+    height: 50px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#prizes {
+    background-color: black;
+    color: rgb(210, 127, 44);
+    font-weight: bold;
+    width: 100%;
+    height: 90%;
+}
+
+#prizes .prize-id {
+    color: white;
+}
+
+#prizes .checkpoint {
+    color: white;
+}
+
+#prizes tr.active td {
+    background-color: rgb(254, 147, 39);
+    color: black;
+}
+
+#prizes tr.active .prize-id {
+    color: white;
+}

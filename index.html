@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>Legyen ön is milliomos</title>
+        <meta charset="utf8">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8" id="main">
+                    <h1>Legyen ön is milliomos</h1>  
+                    
+                    <button id="new-game" class="btn btn-primary">ÚJ JÁTÉK</button>
+
+                    <div id="question-container">
+
+                    </div>
+                </div>
+                <div class="col-sm-4 d-none" id="panel">
+                    <div id="helps">
+                        helps
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+        <script src="./app.js"></script>
+    </body>
+</html>
+
+<script id="question-template" type="text/x-handlebars-template">
+    <div class="question-body mb-1 text-center pt-2">{{ body }}</div>
+
+    <button class="btn answer mb-1 mr-4" data-id="a"><span>A:</span> {{ answers.a }}</button>
+    <button class="btn answer mb-1 mr-4" data-id="b"><span>B:</span> {{ answers.b }}</button>
+    <button class="btn answer mb-1 mr-4" data-id="c"><span>C:</span> {{ answers.c }}</button>
+    <button class="btn answer mb-1 mr-4" data-id="d"><span>D:</span> {{ answers.d }}</button>
+</script>
+
+<script id="prizes-template" type="text/x-handlebars-template">
+    <table id="prizes">
+        {{#each prizes}}
+            <tr {{#if this.checkpoint}}class="checkpoint"{{/if}} data-id="{{ this.id }}">
+                <td class="prize-id">
+                    {{ this.id }}
+                </td>
+                <td>
+                    {{ this.prize }}
+                </td>
+            </tr>
+        {{/each}}
+    </table>
+</script>

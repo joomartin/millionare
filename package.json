@@ -1,0 +1,22 @@
+{
+  "name": "be-a-millionare",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "watch": "./node_modules/nodemon/bin/nodemon.js server.js",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "moment": "^2.20.1",
+    "promise-mysql": "^3.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.12"
+  }
+}
